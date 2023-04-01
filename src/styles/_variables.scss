@@ -1,0 +1,16 @@
+$base-font-size: 16px;
+
+$breakpoints: (
+  sm: rem(768px),
+  md: rem(1024px),
+);
+
+$colors: (
+  colorPrimary: 000000,
+  colorLightPrimary: rgba(0, 0, 0, 0.75),
+  colorSecondary: #7ebcc3,
+  colorBackground: rgba(185, 125, 141, 0.2),
+  colorWhite: #ffffff,
+  colorGray: #939393,
+  colorError: #bf0436,
+);

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./main.scss" class="stylesheet" />
+    <script defer src="./index.js" type="module"></script>
+
+    <title>Sign-up</title>
+  </head>
+  <body>
+    <section class="authLayout">
+      <div class="authLayout__pictureContainer">
+        <img
+          src="./images/sign-up.png"
+          alt="Welcome"
+          class="authLayout__picture"
+        />
+      </div>
+      <div class="authLayout__signUp signUp">
+        <h2 class="signUp__title">Create account</h2>
+        <form id="signUpForm" class="signUp__form" action="/">
+          <div class="signUp__names">
+            <div class="input">
+              <label for="firstName">First name</label>
+              <input
+                id="firstName"
+                name="firstName"
+                type="text"
+                placeholder="Add first name..."
+              />
+              <!-- <div class="input__errorMessage"></div> -->
+            </div>
+
+            <div class="input">
+              <label for="lastName">Last name</label>
+              <input
+                id="lastName"
+                name="lastName"
+                type="text"
+                placeholder="Add last name..."
+              />
+              <!-- <div class="input__errorMessage"></div> -->
+            </div>
+          </div>
+
+          <div class="input">
+            <label for="birthDate">Birth Date</label>
+            <input id="birthDate" name="birthDate" type="text" />
+            <!-- <div class="input__errorMessage"></div> -->
+          </div>
+
+          <div class="input">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="text" placeholder="Email..." />
+            <!-- <div class="input__errorMessage"></div> -->
+          </div>
+
+          <div class="input">
+            <label for="password">Password</label>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              placeholder="Password..."
+            />
+            <button type="button" class="input__key"></button>
+            <!-- <div class="input__errorMessage"></div> -->
+          </div>
+
+          <div class="input">
+            <label for="confirmPassword">Confirm Password</label>
+            <input
+              id="confirmPassword"
+              name="confirmPassword"
+              type="password"
+              placeholder="Confirm Password..."
+            />
+            <button type="button" class="input__key"></button>
+          </div>
+
+          <button class="signUp__button button" type="submit">Create</button>
+        </form>
+      </div>
+    </section>
+
+    <script src="https://unpkg.com/imask"></script>
+  </body>
+</html>

@@ -1,0 +1,180 @@
+@use 'sass:map';
+
+body {
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  font-size: $base-font-size;
+  font-weight: 500;
+  line-height: rem(19px);
+  color: map.get($colors, 'colorPrimary');
+
+  @include sm {
+    font-weight: 400;
+    font-size: rem(12px);
+    line-height: rem(15px);
+  }
+}
+
+.authLayout {
+  height: 100vh;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 55% 45%;
+
+  @include md {
+    grid-template-columns: 45% 55%;
+  }
+
+  @include sm {
+    grid-template-columns: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 40px;
+  }
+
+  &__pictureContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 10px;
+    background-color: map.get($colors, 'colorBackground');
+
+    @include sm {
+      padding: 0;
+      background-color: map.get($colors, 'colorWhite');
+    }
+  }
+
+  &__picture {
+    @include sm {
+      max-width: 280px;
+    }
+  }
+}
+
+.input {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  @include md {
+    gap: 10px;
+  }
+
+  @include sm {
+    gap: 7px;
+  }
+
+  &__key {
+    position: absolute;
+    top: 49px;
+    right: 15px;
+    width: 20px;
+    height: 20px;
+    background-color: map.get($colors, 'colorWhite');
+    background-image: url('./images/key-lg-icon.svg');
+    background-repeat: no-repeat;
+
+    @include md {
+      top: 44px;
+    }
+
+    @include sm {
+      top: 33px;
+      right: 10px;
+      width: 12px;
+      height: 12px;
+      background-image: url('./images/key-sm-icon.svg');
+    }
+  }
+
+  input {
+    padding: 15px 40px 15px 15px;
+    border-radius: 7px;
+    border: 2px solid map.get($colors, 'colorGray');
+    font-weight: 300;
+    font-size: rem(12px);
+    line-height: rem(15px);
+    color: map.get($colors, 'colorLightPrimary');
+
+    &:hover {
+      scale: (1.05);
+      transition: all 0.5s;
+    }
+
+    @include sm {
+      padding: 10px 30px 10px 10px;
+      font-size: rem(10px);
+      line-height: rem(12px);
+    }
+  }
+
+  .input__error {
+    border: 2px solid map.get($colors, 'colorError');
+  }
+
+  .input__success {
+    border: 2px solid map.get($colors, 'colorSecondary');
+  }
+
+  #email {
+    background-image: url('./images/email-lg-icon.svg');
+    background-repeat: no-repeat;
+    background-position-x: calc(100% - 15px);
+    background-position-y: 15px;
+
+    @include sm {
+      background-image: url('./images/email-sm-icon.svg');
+      background-repeat: no-repeat;
+      background-position-x: calc(100% - 10px);
+      background-position-y: 10px;
+    }
+  }
+
+  #birthDate {
+    background-image: url('./images/date-lg-icon.svg');
+    background-repeat: no-repeat;
+    background-position-x: calc(100% - 15px);
+    background-position-y: 15px;
+
+    @include sm {
+      background-image: url('./images/date-sm-icon.svg');
+      background-repeat: no-repeat;
+      background-position-x: calc(100% - 10px);
+      background-position-y: 10px;
+    }
+  }
+
+  &__errorMessage {
+    margin: -10px 0 0 15px;
+    color: map.get($colors, 'colorError');
+    font-weight: 300;
+    font-size: rem(14px);
+
+    @include sm {
+      margin: -7px 0 0 10px;
+      font-size: rem(12px);
+    }
+  }
+}
+
+.button {
+  width: 100%;
+  padding: 15px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: rem(14px);
+  line-height: rem(19px);
+  color: map.get($colors, 'colorWhite');
+  background-color: map.get($colors, 'colorSecondary');
+  border-radius: 7px;
+
+  @include sm {
+    padding: 7px;
+  }
+}
