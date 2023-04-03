@@ -1,6 +1,7 @@
 @use 'sass:map';
 
 .signUp {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,6 +25,9 @@
     font-size: rem(32px);
     line-height: rem(44px);
 
+    animation: title 0.25s linear forwards;
+    opacity: 0;
+
     @include sm {
       font-weight: 600;
       font-size: rem(18px);
@@ -44,12 +48,42 @@
     @include sm {
       gap: 10px;
     }
+
+    .animateChild:nth-child(2) {
+      animation: formsChild 0.25s linear forwards;
+      opacity: 0;
+      animation-delay: 0.5s;
+    }
+    .animateChild:nth-child(3) {
+      animation: formsChild 0.25s linear forwards;
+      opacity: 0;
+      animation-delay: 0.75s;
+    }
+    .animateChild:nth-child(4) {
+      animation: formsChild 0.25s linear forwards;
+      opacity: 0;
+      animation-delay: 1s;
+    }
+    .animateChild:nth-child(5) {
+      animation: formsChild 0.25s linear forwards;
+      opacity: 0;
+      animation-delay: 1.25s;
+    }
+    .animateChild:nth-child(6) {
+      animation: formsChild 0.25s linear forwards;
+      opacity: 0;
+      animation-delay: 1.5s;
+    }
   }
 
   &__names {
     display: flex;
     justify-content: space-between;
     gap: 10px;
+
+    animation: formsChild 0.25s linear forwards;
+    opacity: 0;
+    animation-delay: 0.25s;
 
     input {
       padding: 15px;
@@ -62,5 +96,27 @@
 
   &__button {
     margin-top: 10px;
+  }
+}
+
+@keyframes title {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes formsChild {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
