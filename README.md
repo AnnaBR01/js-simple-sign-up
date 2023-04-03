@@ -8,4 +8,4 @@ The project was created using HTML, SCSS, JS.
 
 <h2 align="center">You can see the basic functionality below</h2>
 <br/>
-<a href="https://js-simple-sign-up-24c8c.web.app/" target="blank">Click to see result 👀</a>
+<a href="https://js-simple-sign-up-24c8c.web.app/" target="_blank">Click to see result 👀</a>
